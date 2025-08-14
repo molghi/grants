@@ -1,0 +1,31 @@
+<section class="projects">
+    <div class="container">
+        <div class="projects__wrapper">
+            <div class="projects__title section-title">{{ title }}</div>
+
+            <div class="projects__text section-subtitle">
+                {{ text }}
+            </div>
+
+            <a [href]="button['link']" class="projects__button">{{ button["text"] }}</a>
+
+            <div class="projects__slider-wrapper">
+                <div class="projects__slider">
+                    <div class="projects__slide" *ngFor="let item of items">
+                        <div class="projects__slide-category">{{ item.category }}</div>
+                        <div class="projects__slide-name">{{ item.name }}</div>
+                        <div class="projects__slide-amount">
+                            <span>Funding amount: </span> <span>{{ item.amount }}</span>
+                        </div>
+                        <div class="projects__slide-text">
+                            {{ item.text }}
+                        </div>
+                        <div class="projects__slide-people">
+                            <img [src]="item.image" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

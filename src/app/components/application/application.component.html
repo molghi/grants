@@ -1,0 +1,21 @@
+<section class="application">
+    <div class="container">
+        <div class="application__wrapper">
+            <div class="application__title section-title">{{ title }}</div>
+
+            <div class="application__text section-subtitle">{{ text }}</div>
+
+            <div class="application__items">
+                <div class="application__item" *ngFor="let item of items">
+                    <div class="application__item-number">
+                        <img [src]="item.image" alt="" />
+                    </div>
+                    <div class="application__item-title">{{ item.title }}</div>
+                    <div class="application__item-text">
+                        {{ item.text }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

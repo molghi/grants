@@ -1,0 +1,108 @@
+.footer {
+    padding: 40px 0;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+        align-items: start;
+        padding-left: 20px;
+    }
+}
+
+.footer__left {
+    display: flex;
+    align-items: center;
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.footer__logo {
+    display: inline-block;
+    margin-right: 32px;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.5;
+    }
+    @media (max-width: 992.98px) {
+        margin-right: 25px;
+    }
+    @media (max-width: 767.98px) {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+}
+
+.footer__list {
+    display: flex;
+    column-gap: 32px;
+    @media (max-width: 992.98px) {
+        column-gap: 25px;
+    }
+    @media (max-width: 767.98px) {
+        display: block;
+        margin-bottom: 35px;
+    }
+}
+
+.footer__item:nth-child(4) .footer__link,
+.footer__item:nth-child(5) .footer__link {
+    padding-right: 24px;
+    position: relative;
+}
+.footer__item:nth-child(4) .footer__link:after,
+.footer__item:nth-child(5) .footer__link:after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    background: url("../../../assets/images/icons/external-link.svg") 0 0 no-repeat;
+    width: 16px;
+    height: 16px;
+}
+@media (max-width: 992.98px) {
+    .footer__item:nth-child(4) .footer__link:after,
+    .footer__item:nth-child(5) .footer__link:after {
+        top: -2px;
+    }
+}
+@media (max-width: 767.98px) {
+    .footer__item + .footer__item {
+        margin-top: 24px;
+    }
+}
+
+.footer__link {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    color: #c8c7d8;
+    transition: all 0.3s;
+    &:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+    @media (max-width: 992.98px) {
+        font-size: 14px;
+    }
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+}
+
+.footer__social-link {
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.5;
+    }
+}

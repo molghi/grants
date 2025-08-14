@@ -1,0 +1,122 @@
+.hero {
+    margin: 50px 0;
+    @media (max-width: 479.98px) {
+        margin: 40px 0;
+    }
+}
+
+.hero__title {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: -0.022em;
+    max-width: 810px;
+    margin: 0 auto 40px;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        right: 35px;
+        background: url("/assets/images/content/underline.png") 0 0 no-repeat;
+        width: 277px;
+        height: 24px;
+        @media (max-width: 479.98px) {
+            right: 50%;
+            transform: translateX(50%);
+            bottom: -25px;
+        }
+    }
+    @media (max-width: 1236px) {
+        font-size: calc(40px + (80 - 40) * ((100vw - 320px) / (1224 - 320)));
+        line-height: calc(60px + (100 - 60) * ((100vw - 320px) / (1224 - 320)));
+    }
+    @media (max-width: 480px) {
+        font-size: 29px;
+        line-height: 1.5;
+    }
+}
+
+.hero__buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 32px;
+    margin-bottom: 80px;
+    @media (max-width: 767.98px) {
+        margin-bottom: 40px;
+    }
+    @media (max-width: 479.98px) {
+        flex-direction: column;
+    }
+}
+
+.hero__button {
+    padding: 16px 39px;
+    &:nth-child(1) {
+        background-color: #393953;
+    }
+    &:nth-child(1):hover {
+        background-color: #000;
+    }
+    @media (max-width: 479.98px) {
+        text-align: center;
+        &:nth-child(1) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.hero__button:nth-child(2) {
+    padding-right: 65px;
+
+    span {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            // z-index: 5;
+            z-index: 1;
+            top: 1px;
+            right: -35px;
+            background: url("/assets/images/icons/arrow-white.svg") 0 0 no-repeat;
+            transform: rotate(-90deg);
+            width: 16px;
+            height: 16px;
+        }
+    }
+    @media (max-width: 479.98px) {
+        span:after {
+            right: -30px;
+        }
+    }
+}
+
+.hero__stat {
+    display: flex;
+    justify-content: space-between;
+    max-width: 808px;
+    margin: 0 auto 80px;
+    @media (max-width: 767.98px) {
+        row-gap: 32px;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+}
+.hero__stat-item {
+    font-family: "Anonymous Pro", monospace;
+    text-align: center;
+}
+.hero__stat-number {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+.hero__stat-caption {
+    font-weight: 400;
+    font-size: 18px;
+    color: #c8c7d8;
+}
+.hero__arrow {
+    text-align: center;
+}

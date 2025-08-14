@@ -1,0 +1,24 @@
+<section class="hero">
+    <div class="container">
+        <div class="hero__wrapper">
+            <h1 class="hero__title">{{ title }}</h1>
+
+            <div class="hero__buttons">
+                <a *ngFor="let button of buttons" [href]="button.link" class="hero__button button"
+                    ><span>{{ button.title }}</span></a
+                >
+            </div>
+
+            <div class="hero__stat">
+                <div class="hero__stat-item" *ngFor="let item of tiles">
+                    <div class="hero__stat-number">{{ item.title }}</div>
+                    <div class="hero__stat-caption">{{ item.text }}</div>
+                </div>
+            </div>
+
+            <div class="hero__arrow">
+                <img [src]="bottomElementPath" alt="scroll down" />
+            </div>
+        </div>
+    </div>
+</section>

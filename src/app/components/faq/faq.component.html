@@ -1,0 +1,18 @@
+<section class="faq">
+    <div class="container">
+        <div class="faq__wrapper">
+            <div class="faq__title section-title">{{ title }}</div>
+
+            <div class="faq__text section-subtitle">{{ text }}</div>
+
+            <div class="faq__items">
+                <div class="faq__item" *ngFor="let item of items; let i = index" (click)="changeActiveItem(i)">
+                    <div [class]="i === activeItem ? 'faq__item-title active' : 'faq__item-title'">{{ item.title }}</div>
+                    <div [class]="i === activeItem ? 'faq__item-text active' : 'faq__item-text'">
+                        {{ item.text }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

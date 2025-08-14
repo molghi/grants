@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss'],
+    styleUrls: ['./header.component.scss', './header-hamburger-menu.scss'],
 })
 export class HeaderComponent implements OnInit {
     constructor() {}
@@ -34,4 +34,8 @@ export class HeaderComponent implements OnInit {
         { link: '#', image: 'assets/images/icons/twi.svg' },
         { link: '#', image: 'assets/images/icons/diss.svg' },
     ];
+
+    isHamburgerMenuActive: boolean = false;
+
+    toggleHamburgerMenu = () => (this.isHamburgerMenuActive = !this.isHamburgerMenuActive);
 }

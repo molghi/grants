@@ -1,0 +1,125 @@
+.projects {
+    position: relative;
+    margin-bottom: 160px;
+}
+
+.projects__wrapper {
+    text-align: center;
+}
+
+.projects__slider {
+    text-align: left;
+    // height: 560px;
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 767.98px) {
+        height: 480px;
+    }
+
+    @media (max-width: 600px) {
+        height: auto;
+    }
+}
+
+.projects__slide {
+    max-width: 392px;
+    background: #393953;
+    border-radius: 16px;
+    padding: 24px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__slide-category {
+    margin-bottom: 8px;
+}
+
+.projects__slide-category,
+.projects__slide-amount {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #a59eba;
+    @media (max-width: 479.98px) {
+        font-size: 14px;
+    }
+}
+
+.projects__slide-name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    @media (max-width: 479.98px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.projects__slide-amount {
+    margin-bottom: 16px;
+    @media (max-width: 600px) {
+        & span {
+            display: block;
+        }
+    }
+}
+
+.projects__slide-text {
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 40px;
+    flex-grow: 1;
+    @media (max-width: 479.98px) {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+}
+
+.projects__button {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 17px;
+    color: #6966ff;
+    margin: 0 0 80px;
+    position: relative;
+    padding-right: 28px;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: 0;
+        background: url("/assets/images/icons/arrow.svg") 0 0 no-repeat;
+        transform: rotate(-90deg);
+        width: 16px;
+        height: 16px;
+        @media (max-width: 767.98px) {
+            top: -2px;
+        }
+    }
+    @media (max-width: 767.98px) {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .projects__title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .projects__text {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,26 @@
+<section class="new">
+    <div class="container">
+        <div class="new__wrapper">
+            <div class="new__title section-title">{{ title }}</div>
+
+            <div class="new__text section-subtitle">
+                {{ text }}
+            </div>
+
+            <a [href]="button['link']" class="new__button">{{ button["text"] }}</a>
+
+            <div class="new__items">
+                <div class="new__item blog-item" *ngFor="let item of items">
+                    <a [href]="item.link" class="new__item-pic blog-item__pic">
+                        <img [src]="item.image" alt="item image" />
+                    </a>
+                    <div class="new__item-body blog-item__body">
+                        <div class="new__item-sup-title blog-item__sup-title">{{ item.class }}</div>
+                        <a [href]="item.link" class="new__item-title blog-item__title">{{ item.title }}</a>
+                        <div class="new__item-date blog-item__date">{{ item.date }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

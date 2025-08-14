@@ -1,0 +1,193 @@
+.application {
+    margin-bottom: 160px;
+    @media (max-width: 767.98px) {
+        margin-bottom: 80px;
+    }
+}
+.application__wrapper {
+    text-align: center;
+}
+.application__title {
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: -10px;
+        right: -5px;
+        background: url("../../../assets/images/content/app-underline.svg") 0 0 no-repeat;
+        width: 161px;
+        height: 16px;
+    }
+    @media (max-width: 479.98px) {
+        &:after {
+            width: 100px;
+            background-size: contain;
+            bottom: -15px;
+        }
+    }
+}
+
+.application__text {
+    margin-bottom: 60px;
+    @media (max-width: 992.98px) {
+        margin-bottom: 40px;
+    }
+}
+
+.application__items {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    column-gap: 15px;
+    @media (max-width: 1280px) {
+        padding: 0 10px;
+    }
+
+    @media (max-width: 992.98px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 25px;
+        margin: 0 15px;
+    }
+}
+
+.application__item {
+    flex: 0 1 392px;
+    background: #393953;
+    border-radius: 16px;
+    padding: 30px;
+    min-height: 480px;
+    &:nth-child(1) {
+        transform: rotate(-1deg);
+        position: relative;
+        z-index: 2;
+    }
+    &:nth-child(1):after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        right: -50px;
+        background: url("../../../assets/images/content/app-top-arrow.png") 0 0 no-repeat;
+        width: 120px;
+        height: 40px;
+    }
+    @media (max-width: 1236px) {
+        &:nth-child(1):after {
+            right: -60px;
+        }
+    }
+    @media (max-width: 992.98px) {
+        &:nth-child(1):after {
+            top: auto;
+            bottom: -30px;
+            right: auto;
+            left: 80px;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+
+    @media (max-width: 479.98px) {
+        &:nth-child(1):after {
+            bottom: -55px;
+        }
+    }
+
+    &:nth-child(2) {
+        position: relative;
+        z-index: 1;
+        -webkit-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+
+    &:nth-child(2):after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 100px;
+        right: -70px;
+        background: url("../../../assets/images/content/app-down-arrow.png") 0 0 no-repeat;
+        width: 120px;
+        height: 40px;
+    }
+
+    @media (max-width: 992.98px) {
+        &:nth-child(2):after {
+            top: auto;
+            bottom: -36px;
+            right: auto;
+            left: -25px;
+            left: 35px;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+
+    @media (max-width: 479.98px) {
+        &:nth-child(2):after {
+            bottom: -55px;
+        }
+    }
+
+    &:nth-child(3) {
+        -webkit-transform: rotate(-1deg);
+        -ms-transform: rotate(-1deg);
+        transform: rotate(-1deg);
+    }
+
+    @media (max-width: 1280px) {
+        & {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 385px;
+            flex: 0 1 385px;
+        }
+    }
+
+    @media (max-width: 1236px) {
+        & {
+            -ms-flex-preferred-size: 300px;
+            flex-basis: 300px;
+        }
+    }
+
+    @media (max-width: 992.98px) {
+        & {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 392px;
+            flex: 0 1 392px;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        & {
+            min-height: 320px;
+            padding: 30px 23px;
+        }
+    }
+}
+
+.application__item-number {
+    margin-bottom: 55px;
+}
+
+.application__item-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+.application__item-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    @media (max-width: 479.98px) {
+        font-size: 14px;
+    }
+}
