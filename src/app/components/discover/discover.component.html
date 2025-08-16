@@ -1,0 +1,45 @@
+<section class="discover">
+    <div class="container">
+        <div class="discover__wrapper">
+            <h1 class="discover__title page-title">{{ title }}</h1>
+            <div class="discover__text">
+                {{ text }}
+            </div>
+            <div class="discover__filters" id="MixItUp9417A2">
+                <div class="discover__filters-buttons">
+                    <button
+                        type="button"
+                        *ngFor="let btn of triggers; let j = index"
+                        [class]="
+                            j === activeTrigger ? 'discover__filters-button trigger active' : 'discover__filters-button trigger'
+                        "
+                        (click)="changeActiveTrigger(j)"
+                        [attr.data-filter]="(btn?.title || '')?.toLowerCase()"
+                    >
+                        {{ btn.title }}
+                    </button>
+                </div>
+
+                <div class="discover__filters-items">
+                    <ng-container *ngFor="let item of items">
+                        <div
+                            *ngIf="activeTrigger === 0 || item.index === activeTrigger"
+                            class="discover__filters-item discover__item"
+                        >
+                            <div class="discover__item-body">
+                                <a href="#" class="discover__item-name">{{ item.title }}</a>
+                                <div class="discover__item-text">{{ item.text }}</div>
+                                <div class="discover__item-amount">
+                                    <span>Funding amount: </span> <span>{{ item.amount }}</span>
+                                </div>
+                            </div>
+                            <div [ngClass]="'discover__item-label discover__item-label--' + item.label.toLowerCase().trim()">
+                                {{ item.label }}
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

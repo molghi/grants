@@ -1,0 +1,38 @@
+<section class="programs">
+    <div class="container">
+        <div class="programs__wrapper">
+            <div class="programs__title page-title">{{ title }}</div>
+
+            <div class="programs__triggers">
+                <button
+                    *ngFor="let btn of triggers; let i = index"
+                    [class]="activeTrigger === i ? 'programs__trigger trigger active' : 'programs__trigger trigger'"
+                    (click)="changeActiveTrigger(i)"
+                    type="button"
+                >
+                    {{ btn.title }}
+                </button>
+            </div>
+
+            <div class="programs__items">
+                <ng-container *ngFor="let item of items">
+                    <div class="programs__item" *ngIf="activeTrigger === 0 || item.index === activeTrigger">
+                        <div class="programs__item-left">
+                            <a href="#" class="programs__item-name">{{ item.name }}</a>
+                            <div class="programs__item-category">{{ item.category }}</div>
+                            <div class="programs__item-description">
+                                {{ item.description }}
+                            </div>
+                        </div>
+                        <div class="programs__item-right">
+                            <div class="programs__item-amount">{{ item.amount }}</div>
+                            <a href="#" class="programs__item-link">
+                                <img [src]="item.image" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</section>

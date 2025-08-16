@@ -105,3 +105,35 @@
         font-size: 14px;
     }
 }
+
+.freqs__title {
+    font-size: 58px;
+    margin-bottom: 120px;
+    margin-top: 80px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 72px;
+    @media (max-width: 767.98px) {
+        font-size: calc(30px + (54 - 30) * ((100vw - 320px) / (1224 - 320)));
+        margin-bottom: calc(80px + (120 - 80) * ((100vw - 320px) / (1224 - 320)));
+        line-height: calc(40px + (72 - 40) * ((100vw - 320px) / (1224 - 320)));
+    }
+}
+
+.freqs__section-title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 30px;
+    padding-bottom: 15px;
+    font-style: italic;
+    border-bottom: 2px solid #fff;
+    line-height: 32px;
+    margin-bottom: 25px;
+    @media (max-width: 767.98px) {
+        font-size: 25px;
+    }
+}
+
+.freqs__section {
+    margin-bottom: 80px;
+}

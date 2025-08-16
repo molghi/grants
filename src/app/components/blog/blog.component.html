@@ -1,0 +1,35 @@
+<section class="blog">
+    <div class="container">
+        <div class="blog__wrapper">
+            <div class="blog__title page-title">{{ title }}</div>
+
+            <div class="blog__triggers">
+                <button
+                    type="button"
+                    *ngFor="let btn of triggers; let i = index"
+                    [class]="activeTrigger === i ? 'blog__trigger trigger active' : 'blog__trigger trigger'"
+                    (click)="changeActiveTrigger(i)"
+                >
+                    {{ btn.title }}
+                </button>
+            </div>
+
+            <div class="blog__items">
+                <ng-container *ngFor="let item of items">
+                    <div class="blog__item blog-item mix spotlight" *ngIf="activeTrigger === 0 || item.index === activeTrigger">
+                        <a href="#" class="blog-item__pic">
+                            <img [src]="item.image" alt="" />
+                        </a>
+                        <div class="blog-item__body">
+                            <div class="blog-item__sup-title">{{ item.text }}</div>
+                            <a href="#" class="blog-item__title">{{ item.title }}</a>
+                            <div class="blog-item__date">{{ item.date }}</div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+            <button class="blog__button">{{ buttonText }}</button>
+        </div>
+    </div>
+</section>

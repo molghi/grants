@@ -1,0 +1,191 @@
+.discover {
+    margin: 80px 0 160px;
+    @media (max-width: 767.98px) {
+        margin: 40px 0 80px;
+    }
+}
+
+.discover__wrapper {
+    text-align: center;
+}
+
+.discover__title {
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+
+    @media (max-width: 992.98px) {
+        font-size: 58px;
+    }
+    @media (max-width: 767.98px) {
+        font-size: calc(29px + (60 - 29) * ((100vw - 320px) / (1224 - 320)));
+        line-height: calc(40px + (72 - 40) * ((100vw - 320px) / (1224 - 320)));
+    }
+}
+
+.discover__text {
+    max-width: 810px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.014em;
+    color: #c8c7d8;
+    margin: 0 auto 40px;
+    @media (max-width: 767.98px) {
+        font-size: 16px;
+    }
+    @media (max-width: 479.98px) {
+        font-size: 14px;
+    }
+}
+
+.discover__filters-buttons {
+    max-width: 395px;
+    margin: 0 auto 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 767.98px) {
+        margin-bottom: 60px;
+    }
+    @media (max-width: 479.98px) {
+        display: none;
+    }
+}
+
+.discover__filters-buttons--slider {
+    display: none;
+    @media (max-width: 479.98px) {
+        display: block;
+        max-width: none;
+        .discover__filters-button {
+            font-size: 14px;
+        }
+    }
+}
+.discover__filters-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    text-align: left;
+    max-width: 810px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.discover__item {
+    background: #393953;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 600px) {
+        .discover__item {
+            flex-direction: column;
+        }
+    }
+}
+.discover__item-body {
+    padding-right: 32px;
+    @media (max-width: 600px) {
+        margin-bottom: 16px;
+        padding-right: 0;
+    }
+}
+
+.discover__item-name {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    &:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+        font-size: 20px;
+    }
+}
+.discover__item-text {
+    font-weight: 450;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    @media (max-width: 600px) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.discover__item-amount {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    color: #c8c7d8;
+    @media (max-width: 767.98px) {
+        line-height: 24px;
+        span {
+            display: block;
+        }
+    }
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
+}
+
+.discover__item-label {
+    display: inline-block;
+    align-self: start;
+    border-radius: 100px;
+    padding: 10px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    @media (max-width: 600px) {
+        .discover__item-label {
+            font-size: 14px;
+        }
+    }
+}
+
+.discover__item-label--funded {
+    background-color: #1c1c28;
+}
+.discover__item-label--open {
+    background-color: #6966ff;
+}
+.discover__item-label--completed {
+    background-color: #16b57f;
+    padding-right: 40px;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        background: url("../../../assets/images/icons/checkcheck.svg") 0 0 no-repeat;
+        background-size: contain;
+        width: 15px;
+        height: 12px;
+    }
+}
+
+.trigger {
+    padding: 16px 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s;
+    &.active {
+        background-color: #393953;
+        &:hover {
+            background-color: #393953;
+        }
+    }
+    &:hover {
+        background-color: #333;
+    }
+}

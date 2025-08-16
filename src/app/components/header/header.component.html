@@ -1,7 +1,7 @@
 <header class="header">
     <div [class]="isHamburgerMenuActive ? 'header__wrapper dark' : 'header__wrapper'">
         <!-- LOGO -->
-        <a [href]="logo['link']" class="header__logo logo">
+        <a [routerLink]="logo['link']" class="header__logo logo">
             <img [src]="logo['image']" alt="logo image" />
         </a>
 
@@ -10,7 +10,7 @@
                 <ul class="header__list">
                     <!-- LOOP OVER -->
                     <li *ngFor="let item of navMenu" class="header__list-item">
-                        <a [href]="item['link']" class="header__link">{{ item.title }}</a>
+                        <a [routerLink]="item['link']" class="header__link">{{ item.title }}</a>
                     </li>
                 </ul>
                 <div class="header__menu-bottom">

@@ -1,0 +1,43 @@
+<section class="grants">
+    <div class="container">
+        <div class="grants__wrapper" id="MixItUp758965">
+            <div class="grants__title page-title">Funded grants</div>
+
+            <div class="grants__tab-triggers">
+                <button
+                    *ngFor="let btn of triggers; let i = index"
+                    [class]="i === activeTrigger ? 'grants__tab-trigger trigger active' : 'grants__tab-trigger trigger'"
+                    (click)="changeActiveTrigger(i)"
+                    type="button"
+                    data-filter="all"
+                >
+                    {{ btn.title }}
+                </button>
+            </div>
+
+            <label class="grants__button">
+                <input type="checkbox" class="input-hidden" />
+                <span class="grants__button-check"></span>
+                <span class="grants__button-text">Show only completed</span>
+            </label>
+
+            <div class="grants__items">
+                <ng-container *ngFor="let item of items">
+                    <div *ngIf="activeTrigger === 0 || item.index === activeTrigger" class="grants__item">
+                        <div class="grants__item-category">{{ item.category }}</div>
+                        <div class="grants__item-name">{{ item.name }}</div>
+                        <div class="grants__item-amount">
+                            <span>Funding amount: </span> <span>{{ item.amount }}</span>
+                        </div>
+                        <div class="grants__item-text">
+                            {{ item.text }}
+                        </div>
+                        <div class="grants__item-avatars">
+                            <img [src]="item.image" alt="" />
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</section>

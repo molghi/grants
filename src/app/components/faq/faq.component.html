@@ -1,17 +1,35 @@
 <section class="faq">
     <div class="container">
         <div class="faq__wrapper">
-            <div class="faq__title section-title">{{ title }}</div>
+            <div *ngIf="type === 'home'" class="faq__title section-title">{{ title }}</div>
 
-            <div class="faq__text section-subtitle">{{ text }}</div>
+            <div *ngIf="type === 'home'" class="faq__text section-subtitle">{{ text }}</div>
 
-            <div class="faq__items">
-                <div class="faq__item" *ngFor="let item of items; let i = index" (click)="changeActiveItem(i)">
-                    <div [class]="i === activeItem ? 'faq__item-title active' : 'faq__item-title'">{{ item.title }}</div>
-                    <div [class]="i === activeItem ? 'faq__item-text active' : 'faq__item-text'">
-                        {{ item.text }}
+            <h1 *ngIf="type === 'individual'" class="freqs__title page-title">Frequently asked questions</h1>
+
+            <div class="faq__items" [style]="type === 'individual' ? 'max-width: 810px; margin: 0 auto;' : ''">
+                <ng-container *ngFor="let item of items; let i = index">
+                    <div class="faq__item" *ngIf="type === 'home'" (click)="changeActiveItem(i)">
+                        <div [class]="i === activeItem ? 'faq__item-title active' : 'faq__item-title'">{{ item["title"] }}</div>
+                        <div [class]="i === activeItem ? 'faq__item-text active' : 'faq__item-text'">
+                            {{ item["text"] }}
+                        </div>
                     </div>
-                </div>
+                </ng-container>
+
+                <ng-container *ngFor="let item of items; let i = index">
+                    <div *ngIf="type === 'individual'" class="freqs__section">
+                        <div class="freqs__section-title">{{ item.title }}</div>
+                        <div class="faq__item" *ngFor="let element of item.items; let j = index" (click)="changeActiveItem(j)">
+                            <div [class]="j === activeItem ? 'faq__item-title active' : 'faq__item-title'">
+                                {{ element["title"] }}
+                            </div>
+                            <div [class]="j === activeItem ? 'faq__item-text active' : 'faq__item-text'">
+                                {{ element["text"] }}
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
             </div>
         </div>
     </div>

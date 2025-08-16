@@ -14,15 +14,15 @@ export class HeaderComponent implements OnInit {
 
     logo: { [key: string]: string } = {
         image: 'assets/images/icons/logo.svg',
-        link: '#',
+        link: '/',
     };
 
     navMenu: Array<any> = [
-        { title: 'Discover initiatives', link: '#' },
-        { title: 'Funded grants', link: '#' },
-        { title: 'Program expenses', link: '#' },
-        { title: 'Blog', link: '#' },
-        { title: 'FAQ', link: '#' },
+        { title: 'Discover initiatives', link: '/discover' },
+        { title: 'Funded grants', link: '/grants' },
+        { title: 'Program expenses', link: '/programs' },
+        { title: 'Blog', link: '/blog' },
+        { title: 'FAQ', link: '/faq' },
     ];
 
     button: { [key: string]: string } = {
