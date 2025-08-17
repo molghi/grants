@@ -1,0 +1,30 @@
+<div class="apply__application">
+    <div class="apply__application-title">{{ title }}</div>
+
+    <form class="apply__application-form">
+        <label class="apply__application-label" *ngFor="let field of fields">
+            <span class="apply__application-span">{{ field.label }} <span *ngIf="field.isRequired">*</span></span>
+
+            <span *ngIf="field.text" class="apply__application-text">{{ field.text }}</span>
+
+            <div class="apply__application-input-box">
+                <input
+                    *ngIf="field.type === 'input'"
+                    type="text"
+                    class="apply__application-input"
+                    [required]="field.isRequired"
+                    [placeholder]="field.placeholder"
+                />
+
+                <textarea
+                    *ngIf="field.type === 'textarea'"
+                    class="apply__application-textarea"
+                    [required]="field.isRequired"
+                    [placeholder]="field.placeholder"
+                ></textarea>
+            </div>
+        </label>
+
+        <button type="submit" class="apply__application-button">{{ buttonText }}</button>
+    </form>
+</div>

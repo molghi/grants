@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 interface ListItem {
     title: string;
     link: string;
+    isExternal: boolean;
 }
 
 interface SocialsItem {
@@ -21,20 +22,20 @@ export class FooterComponent implements OnInit {
     ngOnInit(): void {}
 
     logo: { [key: string]: string } = {
-        link: '#',
+        link: '/',
         image: 'assets/images/icons/footer-logo.svg',
     };
 
     list: Array<ListItem> = [
-        { title: 'About', link: '#' },
-        { title: 'FAQ', link: '#' },
-        { title: 'Brand assets', link: '#' },
-        { title: 'dYdX Foundation', link: '#' },
-        { title: 'dYdX Trading', link: '#' },
+        { title: 'About', link: '#', isExternal: false },
+        { title: 'FAQ', link: '/faq', isExternal: false },
+        { title: 'Brand assets', link: '#', isExternal: false },
+        { title: 'dYdX Foundation', link: '#', isExternal: true },
+        { title: 'dYdX Trading', link: '#', isExternal: true },
     ];
 
     socials: Array<SocialsItem> = [
-        { image: 'assets/images/icons/twi.svg', link: '#' },
-        { image: 'assets/images/icons/diss.svg', link: '#' },
+        { image: 'assets/images/icons/twi.svg', link: 'https://twitter.com' },
+        { image: 'assets/images/icons/diss.svg', link: 'https://discord.com' },
     ];
 }

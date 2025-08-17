@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 interface Item {
     title: string;
@@ -11,9 +12,11 @@ interface Item {
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-    constructor() {}
+    constructor(private titleService: Title) {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.titleService.setTitle('dYdX Grants | Powering the future of dYdX through community grants!');
+    }
 
     items: Array<Item> = [
         {

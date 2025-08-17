@@ -1,0 +1,318 @@
+.grant {
+    margin: 80px 0 160px;
+    @media (max-width: 479.98px) {
+        margin: 40px 0 80px;
+    }
+}
+.grant__wrapper {
+    max-width: 810px;
+    margin: 0 auto;
+    position: relative;
+    @media (max-width: 767.98px) {
+        text-align: center;
+    }
+}
+.grant__go-back {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 48px;
+    height: 48px;
+    background-color: #393953;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    &:hover {
+        background-color: #232333;
+    }
+    @media (max-width: 1050px) {
+        left: 0;
+        top: -70px;
+    }
+    @media (max-width: 479.98px) {
+        display: none;
+    }
+}
+
+.grant__pic {
+    margin-bottom: 24px;
+    img {
+        max-width: 100%;
+    }
+}
+
+.grant__category {
+    color: #a59eba;
+    font-family: "Anonymous Pro", monospace;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    @media (max-width: 767.98px) {
+        margin-bottom: 10px;
+    }
+}
+
+.grant__name {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    margin-bottom: 16px;
+    @media (max-width: 767.98px) {
+        font-size: calc(32px + (60 - 32) * ((100vw - 320px) / (1224 - 320)));
+        line-height: calc(40px + (72 - 40) * ((100vw - 320px) / (1224 - 320)));
+    }
+}
+
+.grant__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 40px;
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+    }
+}
+
+.grant__box-left {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+    }
+}
+
+.grant__status {
+    padding: 10px 16px;
+    border-radius: 25px;
+    @media (max-width: 767.98px) {
+        margin-bottom: 16px;
+    }
+}
+
+.grant__status--funded {
+    padding-right: 40px;
+    background-color: #16b57f;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: url("../../../assets/images/icons/checkcheck.svg") 0 0 no-repeat;
+        background-size: contain;
+        width: 15px;
+        height: 11px;
+    }
+}
+
+.grant__amount {
+    font-weight: 400;
+    line-height: 24px;
+    span:first-child {
+        color: #c8c7d8;
+    }
+    @media (max-width: 767.98px) {
+        margin-bottom: 16px;
+        span {
+            display: block;
+        }
+    }
+}
+
+.grant__link {
+    display: inline-block;
+    padding: 18px 44px 18px 18px;
+    background: #6966ff;
+    border-radius: 7px;
+    font-weight: 500;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.8;
+    }
+    span {
+        position: relative;
+    }
+    span:after {
+        content: "";
+        position: absolute;
+        top: 1px;
+        right: -26px;
+        background: url("../../../assets/images/icons/fi_external-link.svg") 0 0 no-repeat;
+        width: 16px;
+        height: 16px;
+    }
+    @media (max-width: 479.98px) {
+        width: 100%;
+    }
+}
+
+.grant__team {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #393953;
+    font-size: 14px;
+}
+.grant__team-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.grant__team-members {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+        row-gap: 16px;
+    }
+}
+
+.grant__team-member {
+    padding: 8px;
+    padding-right: 24px;
+    background-color: #393953;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+.grant__team-member-pic {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+@media (max-width: 767.98px) {
+    .grant__info {
+        text-align: left;
+    }
+}
+.grant__small-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    &--mod {
+        margin-top: 40px;
+    }
+    @media (max-width: 479.98px) {
+        font-size: 16px;
+    }
+}
+
+.grant__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #c8c7d8;
+    margin-bottom: 40px;
+    @media (max-width: 479.98px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.grant__info-link {
+    display: inline-block;
+    color: #6966ff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    span {
+        position: relative;
+        padding-right: 25px;
+    }
+    span:hover {
+        text-decoration: underline;
+    }
+    span:after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: 0;
+        background: url("../../../assets/images/icons/fi_external-link-purple.svg") 0 0 no-repeat;
+        width: 16px;
+        height: 16px;
+    }
+    @media (max-width: 479.98px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.grant__transaction {
+    background-color: #393953;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    column-gap: 16px;
+    justify-content: space-between;
+    & + & {
+        margin-top: 16px;
+    }
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+.grant__transaction-name {
+    // display: block;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.grant__transaction-date {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Anonymous Pro", monospace;
+    color: #c8c7d8;
+    margin-bottom: 16px;
+}
+.grant__transaction-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    @media (max-width: 767.98px) {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 479.98px) {
+        font-size: 13px;
+    }
+}
+
+.grant__transaction-right {
+    display: flex;
+    column-gap: 16px;
+}
+.grant__transaction-amount {
+    font-family: "Anonymous Pro", monospace;
+    transform: translateY(7px);
+    @media (max-width: 767.98px) {
+        transform: translateY(0px);
+    }
+}
+.grant__transaction-link {
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.7;
+    }
+    @media (max-width: 767.98px) {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}

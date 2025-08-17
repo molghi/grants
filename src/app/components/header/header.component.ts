@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
 
     button: { [key: string]: string } = {
         title: 'Apply <span>for grant</span>',
-        link: '#',
+        link: '/apply',
     };
 
     socials: Array<any> = [

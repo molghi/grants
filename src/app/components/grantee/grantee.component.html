@@ -1,0 +1,32 @@
+<section class="grantee">
+    <div class="container">
+        <div class="grantee__wrapper">
+            <a [routerLink]="'/grants'" class="grant__go-back">
+                <img [src]="arrowImage" alt="" />
+            </a>
+
+            <div class="grantee__pic">
+                <img [src]="bigImage" alt="" />
+            </div>
+
+            <div class="grantee__name">{{ name }}</div>
+
+            <div class="grantee__small-title">{{ aboutTitle }}</div>
+
+            <div class="grantee__text">
+                {{ aboutText }}
+            </div>
+
+            <div class="grantee__small-title">{{ linksTitle }}</div>
+
+            <div class="grantee__social">
+                <a class="grantee__social-link" *ngFor="let item of socials" [href]="item.link" target="_blank">
+                    <div class="grantee__social-link-icon">
+                        <img [src]="item.icon" alt="" />
+                    </div>
+                    <div class="grantee__social-link-text">{{ item.text }}</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

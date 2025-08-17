@@ -1,0 +1,25 @@
+<section class="more more--mod">
+    <div class="container">
+        <div class="more__wrapper">
+            <div class="more__title" [style]="link?.text ? 'margin-bottom: 24px;' : ''">{{ title }}</div>
+
+            <a *ngIf="link?.text" [routerLink]="link?.address" class="more__button">{{ link?.text }}</a>
+
+            <div [class]="layout ? 'more__items more__items--wrap' : 'more__items'">
+                <div class="more__item grant-item" *ngFor="let item of items">
+                    <div class="grant-item__category">{{ item.category }}</div>
+                    <a href="#" class="grant-item__name">{{ item.name }}</a>
+                    <div class="grant-item__amount">
+                        <span>Funding amount: </span> <span>{{ item.amount }}</span>
+                    </div>
+                    <div class="grant-item__text">
+                        {{ item.text }}
+                    </div>
+                    <div class="grant-item__avatars">
+                        <img [src]="item.image" alt="image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

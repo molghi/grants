@@ -17,12 +17,12 @@
             <div class="blog__items">
                 <ng-container *ngFor="let item of items">
                     <div class="blog__item blog-item mix spotlight" *ngIf="activeTrigger === 0 || item.index === activeTrigger">
-                        <a href="#" class="blog-item__pic">
+                        <a [routerLink]="item.link" class="blog-item__pic">
                             <img [src]="item.image" alt="" />
                         </a>
                         <div class="blog-item__body">
                             <div class="blog-item__sup-title">{{ item.text }}</div>
-                            <a href="#" class="blog-item__title">{{ item.title }}</a>
+                            <a [routerLink]="item.link" class="blog-item__title">{{ item.title }}</a>
                             <div class="blog-item__date">{{ item.date }}</div>
                         </div>
                     </div>

@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <main class="main">
+        <app-header></app-header>
+
+        <h1 class="apply__title page-title">{{ title }}</h1>
+        <div class="apply__sub-title">{{ text }}</div>
+
+        <app-faq type="apply-page" [items]="items"></app-faq>
+
+        <app-application-form></app-application-form>
+    </main>
+
+    <app-footer></app-footer>
+</div>

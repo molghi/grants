@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Item {
+    image: string;
+    text: string;
+    index: number;
+    title: string;
+    date: string;
+    link: string;
+}
+
 @Component({
     selector: 'app-blog',
     templateUrl: './blog.component.html',
@@ -22,13 +31,14 @@ export class BlogComponent implements OnInit {
         { title: 'News & updates' },
     ];
 
-    items: Array<any> = [
+    items: Array<Item> = [
         {
             image: 'assets/images/content/round-9.png',
             text: 'Funding round',
             index: 1,
             title: 'Round 9 of approvals',
             date: 'December 24, 2021',
+            link: '/blog-post',
         },
         {
             image: 'assets/images/content/new__item-2.png',
@@ -36,6 +46,7 @@ export class BlogComponent implements OnInit {
             index: 2,
             title: 'Round 8 of approvals',
             date: 'December 24, 2021',
+            link: '/blog-post',
         },
         {
             image: 'assets/images/content/round-7.png',
@@ -43,6 +54,7 @@ export class BlogComponent implements OnInit {
             index: 1,
             title: 'Round 7 of approvals',
             date: 'December 24, 2021',
+            link: '#',
         },
         {
             image: 'assets/images/content/round-6.png',
@@ -50,6 +62,7 @@ export class BlogComponent implements OnInit {
             index: 2,
             title: 'Round 6 of approvals',
             date: 'December 24, 2021',
+            link: '#',
         },
         {
             image: 'assets/images/content/round-5.png',
@@ -57,6 +70,7 @@ export class BlogComponent implements OnInit {
             index: 3,
             title: 'Round 5 of approvals',
             date: 'December 24, 2021',
+            link: '#',
         },
         {
             image: 'assets/images/content/round-4.png',
@@ -64,6 +78,7 @@ export class BlogComponent implements OnInit {
             index: 4,
             title: 'Round 4 of approvals',
             date: 'December 24, 2021',
+            link: '#',
         },
     ];
 

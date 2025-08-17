@@ -1,0 +1,50 @@
+<section class="blog-post">
+    <div class="container">
+        <div class="blog-post__wrapper">
+            <a [routerLink]="'/blog'" class="go-back">
+                <img [src]="arrowImage" alt="" />
+            </a>
+
+            <div class="blog-post__category">{{ category }}</div>
+
+            <h1 class="blog-post__title page-title">{{ title }}</h1>
+
+            <div class="blog-post__author">
+                <div class="blog-post__author-by">By:</div>
+                <div class="blog-post__author-item">
+                    <div class="blog-post__author-pic">
+                        <img [src]="author['image']" alt="" />
+                    </div>
+                    <div class="blog-post__author-name">{{ author["name"] }}</div>
+                </div>
+            </div>
+
+            <div class="blog-post__pic">
+                <img [src]="postImage" alt="" />
+            </div>
+
+            <div class="blog-post__caption">{{ postImageCaption }}</div>
+
+            <div class="blog-post__info">
+                <div *ngFor="let p of paragraphs">
+                    <div *ngIf="p.type === 'text'" class="blog-post__text">
+                        <p>{{ p.text }}</p>
+                    </div>
+
+                    <div *ngIf="p.type === 'bigTitle'" class="blog-post__medium-title">
+                        {{ p.text }}
+                    </div>
+
+                    <div *ngIf="p.type === 'smallTitle'" class="blog-post__smaller-title">
+                        {{ p.text }}
+                    </div>
+                </div>
+
+                <div class="blog-post__quote">
+                    {{ quote["text"] }}
+                    <span>— {{ quote["author"] }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

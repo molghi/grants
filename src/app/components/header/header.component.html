@@ -10,7 +10,7 @@
                 <ul class="header__list">
                     <!-- LOOP OVER -->
                     <li *ngFor="let item of navMenu" class="header__list-item">
-                        <a [routerLink]="item['link']" class="header__link">{{ item.title }}</a>
+                        <a [routerLink]="item['link']" routerLinkActive="active" class="header__link">{{ item.title }}</a>
                     </li>
                 </ul>
                 <div class="header__menu-bottom">
@@ -21,7 +21,7 @@
                 </div>
             </nav>
 
-            <a [href]="button['link']" class="header__cta button" [innerHTML]="button['title']"></a>
+            <a [routerLink]="button['link']" class="header__cta button" [innerHTML]="button['title']"></a>
 
             <div
                 [class]="isHamburgerMenuActive ? 'header__hamburger-menu active' : 'header__hamburger-menu'"

@@ -1,0 +1,68 @@
+<section class="grant">
+    <div class="container">
+        <div class="grant__wrapper">
+            <a routerLink="/grants" class="grant__go-back">
+                <img [src]="arrowImage" alt="" />
+            </a>
+
+            <div class="grant__pic"><img [src]="mainImage" alt="" /></div>
+
+            <div class="grant__category">{{ category }}</div>
+
+            <div class="grant__name">{{ name }}</div>
+
+            <div class="grant__box">
+                <div class="grant__box-left">
+                    <div class="grant__status grant__status--funded">{{ status }}</div>
+                    <div class="grant__amount">
+                        <span>Funding amount: </span> <span>{{ amount }}</span>
+                    </div>
+                </div>
+                <a [href]="link" class="grant__link"><span>Project link</span></a>
+            </div>
+
+            <div class="grant__team">
+                <div class="grant__team-text">{{ team["title"] }}</div>
+                <div class="grant__team-members">
+                    <div class="grant__team-member" *ngFor="let member of team['members']">
+                        <div class="grant__team-member-pic"><img [src]="member.image" alt="" /></div>
+                        <div class="grant__team-member-name">{{ member.name }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grant__info">
+                <div *ngFor="let item of content; let i = index">
+                    <div
+                        *ngIf="item.type === 'title'"
+                        [class]="i === content.length - 1 ? 'grant__small-title grant__small-title--mod' : 'grant__small-title'"
+                    >
+                        {{ item.text }}
+                    </div>
+
+                    <div *ngIf="item.type === 'text'" class="grant__text">{{ item.text }}</div>
+
+                    <a *ngIf="item.type === 'link'" href="#" class="grant__info-link"
+                        ><span>{{ item.text }}</span></a
+                    >
+                </div>
+
+                <div class="grant__transaction" *ngFor="let item of rounds">
+                    <div class="grant__transaction-left">
+                        <a href="#" class="grant__transaction-name">{{ item.name }}</a>
+                        <div class="grant__transaction-date">{{ item.date }}</div>
+                        <div class="grant__transaction-description">
+                            {{ item.text }}
+                        </div>
+                    </div>
+                    <div class="grant__transaction-right">
+                        <div class="grant__transaction-amount">{{ item.amount }}</div>
+                        <a href="#" class="grant__transaction-link">
+                            <img [src]="item.image" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

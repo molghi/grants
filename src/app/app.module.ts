@@ -21,6 +21,15 @@ import { ProgramsBlockComponent } from './components/programs-block/programs-blo
 import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { FaqPageComponent } from './pages/faq-page/faq-page.component';
+import { ApplyComponent } from './pages/apply/apply.component';
+import { ApplicationFormComponent } from './components/application-form/application-form.component';
+import { GranteePageComponent } from './pages/grantee-page/grantee-page.component';
+import { GranteeComponent } from './components/grantee/grantee.component';
+import { MoreComponent } from './components/more/more.component';
+import { BlogPostPageComponent } from './pages/blog-post-page/blog-post-page.component';
+import { BlogPostComponent } from './components/blog-post/blog-post.component';
+import { GrantPageComponent } from './pages/grant-page/grant-page.component';
+import { GrantBlockComponent } from './components/grant-block/grant-block.component';
 
 @NgModule({
     declarations: [
@@ -43,6 +52,15 @@ import { FaqPageComponent } from './pages/faq-page/faq-page.component';
         BlogPageComponent,
         BlogComponent,
         FaqPageComponent,
+        ApplyComponent,
+        ApplicationFormComponent,
+        GranteePageComponent,
+        GranteeComponent,
+        MoreComponent,
+        BlogPostPageComponent,
+        BlogPostComponent,
+        GrantPageComponent,
+        GrantBlockComponent,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],

@@ -7,7 +7,10 @@
 
             <h1 *ngIf="type === 'individual'" class="freqs__title page-title">Frequently asked questions</h1>
 
-            <div class="faq__items" [style]="type === 'individual' ? 'max-width: 810px; margin: 0 auto;' : ''">
+            <div
+                class="faq__items"
+                [style]="type === 'individual' || type === 'apply-page' ? 'max-width: 810px; margin: 0 auto;' : ''"
+            >
                 <ng-container *ngFor="let item of items; let i = index">
                     <div class="faq__item" *ngIf="type === 'home'" (click)="changeActiveItem(i)">
                         <div [class]="i === activeItem ? 'faq__item-title active' : 'faq__item-title'">{{ item["title"] }}</div>
@@ -18,8 +21,11 @@
                 </ng-container>
 
                 <ng-container *ngFor="let item of items; let i = index">
-                    <div *ngIf="type === 'individual'" class="freqs__section">
+                    <div *ngIf="type === 'individual' || type === 'apply-page'" class="freqs__section">
                         <div class="freqs__section-title">{{ item.title }}</div>
+
+                        <div *ngIf="item.text" class="freqs-sub-title">{{ item.text }}</div>
+
                         <div class="faq__item" *ngFor="let element of item.items; let j = index" (click)="changeActiveItem(j)">
                             <div [class]="j === activeItem ? 'faq__item-title active' : 'faq__item-title'">
                                 {{ element["title"] }}
