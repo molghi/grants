@@ -54,7 +54,7 @@ export class BlogComponent implements OnInit {
             index: 1,
             title: 'Round 7 of approvals',
             date: 'December 24, 2021',
-            link: '#',
+            link: '/blog-post',
         },
         {
             image: 'assets/images/content/round-6.png',
@@ -62,7 +62,7 @@ export class BlogComponent implements OnInit {
             index: 2,
             title: 'Round 6 of approvals',
             date: 'December 24, 2021',
-            link: '#',
+            link: '/blog-post',
         },
         {
             image: 'assets/images/content/round-5.png',
@@ -70,7 +70,7 @@ export class BlogComponent implements OnInit {
             index: 3,
             title: 'Round 5 of approvals',
             date: 'December 24, 2021',
-            link: '#',
+            link: '/blog-post',
         },
         {
             image: 'assets/images/content/round-4.png',
@@ -78,7 +78,7 @@ export class BlogComponent implements OnInit {
             index: 4,
             title: 'Round 4 of approvals',
             date: 'December 24, 2021',
-            link: '#',
+            link: '/blog-post',
         },
     ];
 

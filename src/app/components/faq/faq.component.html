@@ -26,11 +26,11 @@
 
                         <div *ngIf="item.text" class="freqs-sub-title">{{ item.text }}</div>
 
-                        <div class="faq__item" *ngFor="let element of item.items; let j = index" (click)="changeActiveItem(j)">
-                            <div [class]="j === activeItem ? 'faq__item-title active' : 'faq__item-title'">
+                        <div class="faq__item" *ngFor="let element of item.items; let j = index" (click)="changeActiveItem(j, i)">
+                            <div [class]="+(i + '.' + j) === activeItem ? 'faq__item-title active' : 'faq__item-title'">
                                 {{ element["title"] }}
                             </div>
-                            <div [class]="j === activeItem ? 'faq__item-text active' : 'faq__item-text'">
+                            <div [class]="+(i + '.' + j) === activeItem ? 'faq__item-text active' : 'faq__item-text'">
                                 {{ element["text"] }}
                             </div>
                         </div>

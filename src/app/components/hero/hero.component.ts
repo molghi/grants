@@ -13,8 +13,8 @@ export class HeroComponent implements OnInit {
     title: string = 'Powering the future of dYdX through community grants';
 
     buttons: Array<any> = [
-        { title: 'Discover RFPs', link: '#' },
-        { title: 'Apply for grant', link: '#' },
+        { title: 'Discover RFPs', link: '/discover' },
+        { title: 'Apply for grant', link: '/apply' },
     ];
 
     tiles: Array<any> = [

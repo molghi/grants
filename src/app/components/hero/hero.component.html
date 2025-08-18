@@ -4,9 +4,9 @@
             <h1 class="hero__title">{{ title }}</h1>
 
             <div class="hero__buttons">
-                <a *ngFor="let button of buttons" [href]="button.link" class="hero__button button"
-                    ><span>{{ button.title }}</span></a
-                >
+                <a *ngFor="let button of buttons" [routerLink]="button.link" class="hero__button button">
+                    <span>{{ button.title }}</span>
+                </a>
             </div>
 
             <div class="hero__stat">

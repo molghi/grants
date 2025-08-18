@@ -26,8 +26,15 @@ export class FaqComponent implements OnInit {
 
     activeItem: number = -1;
 
-    changeActiveItem(index: number) {
-        if (index === this.activeItem) this.activeItem = -1;
-        else this.activeItem = index;
+    changeActiveItem(index: number, biggerIndex?: number) {
+        // if (biggerIndex && biggerIndex > -1) {
+        if (biggerIndex !== undefined) {
+            // this.activeItem = +`${biggerIndex}.${index}`;
+            const newActive = +(biggerIndex + '.' + index); // convert to number like 1.2
+            this.activeItem = this.activeItem === newActive ? -1 : newActive;
+        } else {
+            if (index === this.activeItem) this.activeItem = -1;
+            else this.activeItem = index;
+        }
     }
 }

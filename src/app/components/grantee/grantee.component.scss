@@ -29,6 +29,15 @@
     font-size: 60px;
     line-height: 72px;
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    transform: translateX(-5%);
+    justify-content: center;
+    gap: 40px;
+    span {
+        font-weight: normal;
+        font-size: 30px;
+    }
     @media (max-width: 479.98px) {
         font-size: 32px;
         line-height: 40px;

@@ -6,6 +6,7 @@ interface Item {
     amount: string;
     text: string;
     image: string;
+    link: string;
 }
 
 @Component({
@@ -25,12 +26,13 @@ export class ProjectsComponent implements OnInit {
 
     button: { [key: string]: string } = {
         text: 'View all funded projects',
-        link: '#',
+        link: '/grants',
     };
 
     items: Array<Item> = [
         {
             category: 'Crowdfund',
+            link: '/grant',
             name: 'Funding rates page',
             amount: '$5,000 - $6,000',
             text: `Grant will be used to build a dedicated web app to give traders a view of all dYdX asset funding rates
@@ -41,6 +43,7 @@ export class ProjectsComponent implements OnInit {
         },
         {
             category: 'Edition',
+            link: '/grant',
             name: 'Tradingview integration',
             amount: '$5,000 - $6,000',
             text: `The grant will be used to build a web application that integrates Tradingview strategies into a dYdX
@@ -50,6 +53,7 @@ export class ProjectsComponent implements OnInit {
         },
         {
             category: 'Entry',
+            link: '/grant',
             name: 'Rewards optimization research and paper',
             amount: '$5,000 - $6,000',
             text: `The Grant will be used to write a full research report and code samples that will determine optimal
@@ -59,6 +63,7 @@ export class ProjectsComponent implements OnInit {
         },
         {
             category: 'Crowdfund',
+            link: '/grant',
             name: 'Funding rates page',
             amount: '$5,000 - $6,000',
             text: `Grant will be used to build a dedicated web app to give traders a view of all dYdX asset funding rates
@@ -69,6 +74,7 @@ export class ProjectsComponent implements OnInit {
         },
         {
             category: 'Edition',
+            link: '/grant',
             name: 'Tradingview integration',
             amount: '$5,000 - $6,000',
             text: `The grant will be used to build a web application that integrates Tradingview strategies into a dYdX
@@ -78,6 +84,7 @@ export class ProjectsComponent implements OnInit {
         },
         {
             category: 'Entry',
+            link: '/grant',
             name: 'Rewards optimization research and paper',
             amount: '$5,000 - $6,000',
             text: `The Grant will be used to write a full research report and code samples that will determine optimal
@@ -87,6 +94,7 @@ export class ProjectsComponent implements OnInit {
         },
         {
             category: 'Crowdfund',
+            link: '/grant',
             name: 'Funding rates page',
             amount: '$5,000 - $6,000',
             text: ` Grant will be used to build a dedicated web app to give traders a view of all dYdX asset funding rates
@@ -97,6 +105,7 @@ export class ProjectsComponent implements OnInit {
         },
         {
             category: 'Edition',
+            link: '/grant',
             name: 'Tradingview integration',
             amount: '$5,000 - $6,000',
             text: `The grant will be used to build a web application that integrates Tradingview strategies into a dYdX
@@ -106,6 +115,7 @@ export class ProjectsComponent implements OnInit {
         },
         {
             category: 'Entry',
+            link: '/grant',
             name: 'Rewards optimization research and paper',
             amount: '$5,000 - $6,000',
             text: `The Grant will be used to write a full research report and code samples that will determine optimal

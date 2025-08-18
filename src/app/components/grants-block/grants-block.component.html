@@ -25,7 +25,9 @@
                 <ng-container *ngFor="let item of items">
                     <div *ngIf="activeTrigger === 0 || item.index === activeTrigger" class="grants__item">
                         <div class="grants__item-category">{{ item.category }}</div>
-                        <div class="grants__item-name">{{ item.name }}</div>
+                        <div class="grants__item-name">
+                            <a [routerLink]="item.link">{{ item.name }}</a>
+                        </div>
                         <div class="grants__item-amount">
                             <span>Funding amount: </span> <span>{{ item.amount }}</span>
                         </div>
@@ -33,7 +35,9 @@
                             {{ item.text }}
                         </div>
                         <div class="grants__item-avatars">
-                            <img [src]="item.image" alt="" />
+                            <a [routerLink]="'/grantee'">
+                                <img [src]="item.image" alt="" />
+                            </a>
                         </div>
                     </div>
                 </ng-container>

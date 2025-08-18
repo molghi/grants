@@ -137,6 +137,9 @@
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 12px;
+    a:hover {
+        text-decoration: underline;
+    }
     @media (max-width: 479.98px) {
         font-size: 20px;
     }
@@ -148,6 +151,15 @@
         span {
             display: block;
             line-height: 1.5;
+        }
+    }
+}
+
+.grants__item-avatars {
+    a {
+        transition: all 0.3s;
+        &:hover {
+            opacity: 0.5;
         }
     }
 }

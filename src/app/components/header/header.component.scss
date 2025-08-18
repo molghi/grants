@@ -1,3 +1,30 @@
+.header {
+    // sticky on scroll up:
+    &.visible {
+        animation: fadeInUp 0.3s ease forwards;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        .header__wrapper {
+            position: relative;
+            z-index: 20;
+        }
+        &:after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 10px;
+            right: 10px;
+            height: 120px;
+            background-color: rgb(28, 28, 40);
+            box-shadow: 0 5px 5px #000;
+            z-index: 8;
+        }
+    }
+}
+
 .header__wrapper {
     display: flex;
     justify-content: space-between;
@@ -114,5 +141,14 @@
 @media (max-width: 480px) {
     ::ng-deep .header__cta.button span {
         display: none;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

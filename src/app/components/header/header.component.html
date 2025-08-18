@@ -1,4 +1,4 @@
-<header class="header">
+<header [class]="headerVisible ? 'header visible' : 'header'">
     <div [class]="isHamburgerMenuActive ? 'header__wrapper dark' : 'header__wrapper'">
         <!-- LOGO -->
         <a [routerLink]="logo['link']" class="header__logo logo">
